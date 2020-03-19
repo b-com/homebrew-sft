@@ -3,7 +3,11 @@ class Remaken < Formula
   homepage "https://github.com/b-com-software-basis/remaken"
 
 
-  url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.5.2/remaken", :using => :curl
+    if OS.mac?
+      url "https://github.com/b-com-software-basis/remaken/releases/download/macOS-Mojave%2Fremaken-1.5.2/remaken", :using => :curl
+    elsif OS.linux?
+      url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.5.2/remaken", :using => :curl
+    end
 
   def install
     bin.install "remaken"
