@@ -6,6 +6,6 @@ class Remaken < Formula
   url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.5.2/remaken", :using => :curl
 
   def install
-    bin.install "b-com/remaken"
+    bin.install "remaken"
   end
 end
