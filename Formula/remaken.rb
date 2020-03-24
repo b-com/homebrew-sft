@@ -9,6 +9,10 @@ class Remaken < Formula
       url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.5.2/remaken", :using => :curl
     end
 
+    resource "qmake" do
+      head "https://github.com/b-com-software-basis/builddefs-qmake.git", :using => :git, :branch => :master
+    end
+
   def install
     bin.install "remaken"
   end
