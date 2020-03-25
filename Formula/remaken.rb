@@ -15,6 +15,6 @@ class Remaken < Formula
 
   def install
     bin.install "remaken"
-    resource("qmake").stage { share.install "builddefs-qmake" }
+    resource("qmake").stage { (share/"qmake").install "builddefs-qmake" }
   end
 end
