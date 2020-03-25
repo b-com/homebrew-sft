@@ -16,6 +16,6 @@ class Remaken < Formula
 
   def install
     bin.install "remaken"
-    resource("qmake").unpack(share)
+    resource("qmake").unpack(share/"remaken/qmake")
   end
 end
