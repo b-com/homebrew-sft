@@ -10,7 +10,7 @@ class Remaken < Formula
     end
 
     resource "qmake" do
-      url "https://github.com/b-com-software-basis/builddefs-qmake.git", :using => :git, :branch => :master
+      url "https://github.com/b-com-software-basis/builddefs-qmake.git", :using => :git, :branch => "master"
     end
 
   def install
