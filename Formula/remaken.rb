@@ -13,9 +13,14 @@ class Remaken < Formula
     resource "qmake" do
       url "https://github.com/b-com-software-basis/builddefs-qmake.git", :using => :git, :branch => "master"
     end
+  
+  depends_on "pkg-config" => :recommended
+  depends_on "conan" => :recommended
 
   def install
     bin.install "remaken"
     resource("qmake").unpack(share/"remaken/qmake")
+    mkdir_p(ENV['HOME']/.remaken/rules)
+    ln_s(share/"remaken/qmake",ENV['HOME']/.remaken/rules/qmake)
   end
 end
