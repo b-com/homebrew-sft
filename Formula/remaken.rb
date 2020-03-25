@@ -20,7 +20,7 @@ class Remaken < Formula
   def install
     bin.install "remaken"
     resource("qmake").unpack(share/"remaken/qmake")
-    mkdir_p(ENV['HOME']/.remaken/rules)
-    ln_s(share/"remaken/qmake",ENV['HOME']/.remaken/rules/qmake)
+    mkdir_p(ENV['HOME']/".remaken/rules")
+    ln_s(share/"remaken/qmake",ENV['HOME']/".remaken/rules/qmake")
   end
 end
