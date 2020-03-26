@@ -10,19 +10,11 @@ class Remaken < Formula
       url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.5.2/remaken", :using => :curl
       sha256 "debd38ebf4670bc73da066f789f3509ddb67d692456eca851aa6e1a106e70e14"
     end
-
-    resource "qmake" do
-      url "https://github.com/b-com-software-basis/builddefs-qmake.git", :using => :git, :branch => "master"
-    end
   
   depends_on "pkg-config" => :recommended
   depends_on "conan" => :recommended
 
   def install
     bin.install "remaken"
-    resource("qmake").unpack(share/"remaken/qmake")
-    system "echo", ENV['HOMEBREW_HOME']
-    system "mkdir","-p", "$HOME/.remaken/rules"
-    system "ln","-s", share/"remaken/qmake", "$HOME/.remaken/rules/"
   end
 end
