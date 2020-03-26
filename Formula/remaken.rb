@@ -20,7 +20,8 @@ class Remaken < Formula
   def install
     bin.install "remaken"
     resource("qmake").unpack(share/"remaken/qmake")
+    system "echo", ENV['HOME']
     system "mkdir","-p", "$HOME/.remaken/rules"
-    system "ln","-s", share/"remaken/qmake", "$HOME/.remaken/rules/qmake"
+    system "ln","-s", share/"remaken/qmake", "$HOME/.remaken/rules/"
   end
 end
