@@ -23,7 +23,7 @@ class Remaken < Formula
       bin.install "remaken-Ubuntu1804"
       mv bin/"remaken-Ubuntu1804", bin/"remaken"
     end
-    system "conan", "remote", "add", "--force", "--insert", "conan-community", "https://api.bintray.com/conan/conan-community/conan"
+    system "conan", "remote", "add", "--force", "--insert", "0", "conan-community", "https://api.bintray.com/conan/conan-community/conan"
     system "conan", "remote", "add", "--force", "bincrafters", "https://api.bintray.com/conan/bincrafters/public-conan"
   end
 end
