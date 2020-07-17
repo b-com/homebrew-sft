@@ -4,18 +4,26 @@ class Remaken < Formula
 
 
     if OS.mac?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/macOS-Mojave%2Fremaken-1.6.3/remaken", :using => :curl
-      sha256 "9acb64a1f6c0cef0e43af722c9ea2b5966450e44566ef88a37b40efce474a773"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.6.4/remaken-macOS-Mojave", :using => :curl
+      sha256 "f55b5f44ac8490fd56279c03fc5afe291eaad008aaffd99ac46825561ee301b1"
       depends_on "pkg-config" => :recommended
     elsif OS.linux?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/Ubuntu1804%2Fremaken-1.6.3/remaken", :using => :curl
-      sha256 "1966692a5adc438eac714529b7f5340492ec6ee2f046febcc3a62b28f0dc4bbe"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.6.4/remaken-Ubuntu1804", :using => :curl
+      sha256 "a1a2f94e0e6db93801a3367df4b7b4c3f997ceac5086fa5926441398a9eb33d6"
     end
   
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
 
   def install
-    bin.install "remaken"
+    if OS.mac?
+      bin.install "remaken-macOS-Mojave"
+      mv bin/"remaken-macOS-Mojave", bin/"remaken"
+    elsif OS.linux?
+      bin.install "remaken-Ubuntu1804"
+      mv bin/"remaken-Ubuntu1804", bin/"remaken"
+    end
+    system "conan", "remote", "add", "--force", "--insert", "conan-community", "https://api.bintray.com/conan/conan-community/conan"
+    system "conan", "remote", "add", "--force", "bincrafters", "https://api.bintray.com/conan/bincrafters/public-conan"
   end
 end
