@@ -1,4 +1,4 @@
-class RemakenAT1.7 < Formula
+class RemakenAT1_7 < Formula
   desc "useful tool that handles binary dependencies from various package managers (conan, vcpkg, system package managers) or from bare repositories with remaken own package format."
   homepage "https://github.com/b-com-software-basis/remaken"
 
@@ -13,7 +13,7 @@ class RemakenAT1.7 < Formula
     end
 
   version "1.7.3"
-
+  keg_only :versioned_formulae
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
 
