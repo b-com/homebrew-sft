@@ -13,7 +13,7 @@ class RemakenAT17 < Formula
     end
 
   version "1.7.3"
-  keg_only :versioned_formulae
+  keg_only "Older remaken version"
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
 
