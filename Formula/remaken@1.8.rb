@@ -1,20 +1,19 @@
-class Remaken < Formula
-  desc "Useful tool that handles binary dependencies from various package managers (conan, vcpkg, system package managers) or from bare repositories with remaken own package format."
+class RemakenAT18 < Formula
+  desc "useful tool that handles binary dependencies from various package managers (conan, vcpkg, system package managers) or from bare repositories with remaken own package format."
   homepage "https://github.com/b-com-software-basis/remaken"
 
 
     if OS.mac?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.0/remaken-macOS-Mojave", :using => :curl
-      sha256 "197a8ddd26fab2a8b21c7fc17d75fc8386854f4df50fabbc60a9528e9dde0916"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.8.1/remaken-macOS-Mojave", :using => :curl
+      sha256 "53a51c94a4818d76ca2bfce08c22deecc2c4cf8192794178a66995d16acf08b7"
       depends_on "pkg-config" => :recommended
     elsif OS.linux?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.0/remaken-Ubuntu1804", :using => :curl
-      sha256 "f7e6f094bf3c7df666372496368d569738e6a6b666860746234d7901f0c4258e"
-      
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.8.1/remaken-Ubuntu1804", :using => :curl
+      sha256 "381832f6ed5b4665a24ddf569474279f3ebf3d94808b86267db28026af2c1e54"
     end
 
-  version "1.9.0"
-
+  version "1.8.1"
+  keg_only "Older remaken version"
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
 
