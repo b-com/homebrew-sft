@@ -4,16 +4,16 @@ class Remaken < Formula
 
 
     if OS.mac?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.1/remaken-macOS-Mojave", :using => :curl
-      sha256 "46ae060ef117ac2e23e08e0706da9b0c4fa5ebef8f13ba8098325c2f2ce1954c"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.2/remaken-macOS-Mojave", :using => :curl
+      sha256 "156cd733fa70b57f4ffc74fa034bfa16632e471b0fc9a41eca4a2409b2cf47f1"
       depends_on "pkg-config" => :recommended
     elsif OS.linux?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.1/remaken-Ubuntu1804", :using => :curl
-      sha256 "baf6abd0b1ea3d7e94bacb4bedd810a1e58ab5fee5771fe085ed35d1572231b4"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.2/remaken-Ubuntu1804", :using => :curl
+      sha256 "25539ef21a0c3e88593c95fa8f4568bf1ea32e27b48709a7868fa8f20b180b9d"
       
     end
 
-  version "1.9.1"
+  version "1.9.2"
 
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
