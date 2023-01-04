@@ -9,7 +9,7 @@ class Remaken < Formula
       depends_on "pkg-config" => :recommended
     elsif OS.linux?
       url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.4/remaken-Ubuntu1804", :using => :curl
-      sha256 "5f8c727394b3bca9a150e0749d433175ab32bfdbd439d2306c3fcbabec5010dc"
+      sha256 "c15cbc1e0b5a0c34b2a03aa6c4a5e0310598e05589b6a84cd63fbcda9e8b55b2"
       
     end
 
