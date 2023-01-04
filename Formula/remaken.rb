@@ -8,12 +8,12 @@ class Remaken < Formula
       sha256 "156cd733fa70b57f4ffc74fa034bfa16632e471b0fc9a41eca4a2409b2cf47f1"
       depends_on "pkg-config" => :recommended
     elsif OS.linux?
-      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.3/remaken-Ubuntu1804", :using => :curl
-      sha256 "de6c7dd622a4e6d93ac7af87ff242bbbf646e2dfe9b26943c3747b071148e619"
+      url "https://github.com/b-com-software-basis/remaken/releases/download/1.9.4/remaken-Ubuntu1804", :using => :curl
+      sha256 "5f8c727394b3bca9a150e0749d433175ab32bfdbd439d2306c3fcbabec5010dc"
       
     end
 
-  version "1.9.3"
+  version "1.9.4"
 
   depends_on "conan" => :recommended
   depends_on "cmake" => :recommended
