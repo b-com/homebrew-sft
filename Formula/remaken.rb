@@ -15,9 +15,6 @@ class Remaken < Formula
 
   version "1.9.4"
 
-  depends_on "conan" => :recommended
-  depends_on "cmake" => :recommended
-
   def install
     if OS.mac?
       bin.install "remaken-macOS-Mojave"
